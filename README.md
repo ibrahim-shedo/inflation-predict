@@ -1,47 +1,53 @@
-Inflation Prediction Using Multiple Linear Regression
-Project Overview
-This project aims to predict annual inflation rates using historical economic indicators. Multiple linear regression is applied to forecast the inflation rate based on the following key features:
+# Inflation Prediction Using Multiple Linear Regression
 
-Annual GDP Growth Rates (%)
-Average Annual Exchange Rates (KSHS vs USD)
-Annual CPI Rates (%)
-Annual Interest (Lending) Rates (%)
+## Project Overview
+This project aims to predict annual inflation rates using historical economic indicators. Multiple linear regression is applied to forecast the inflation rate based on the following key features: 
+- **Annual GDP Growth Rates (%)**
+- **Average Annual Exchange Rates (KSHS vs USD)**
+- **Annual CPI Rates (%)**
+- **Annual Interest (Lending) Rates (%)**
+
 The target variable is:
+- **Annual Inflation Rates (%)**
 
-Annual Inflation Rates (%)
-Dataset
+## Dataset
 The dataset consists of economic data collected over several years, and the columns are structured as follows:
 
-Column Name	Description
-YEARS	The year in which the data was recorded
-ANNUAL GDP GROWTH RATES (%)	The percentage growth of GDP in that year
-AVERAGE ANNUAL EXCHANGE RATES (KSHS vs USD)	The average exchange rate between KSHS and USD for that year
-ANNUAL CPI RATES (%)	The Consumer Price Index rates for the year
-ANNUAL INTEREST (LENDING) RATES (%)	The average annual lending interest rates
-ANNUAL INFLATION RATES (%)	The percentage inflation rate for that year (Target Variable)
-Project Structure
-data/: This folder contains the dataset file (CSV or Excel format).
-src/: Contains the Python code used for data processing and model training.
-preprocessing.py: Script to clean and preprocess the dataset.
-train_model.py: Script to train the multiple linear regression model.
-evaluate_model.py: Script to evaluate the model's performance.
-notebooks/: Jupyter notebooks for exploratory data analysis (EDA) and model experimentation.
-models/: Saved models after training.
-Getting Started
-Prerequisites
-Make sure you have the following installed:
+| Column Name                                  | Description                                                    |
+|----------------------------------------------|----------------------------------------------------------------|
+| `YEARS`                                      | The year in which the data was recorded                        |
+| `ANNUAL GDP GROWTH RATES (%)`                | The percentage growth of GDP in that year                      |
+| `AVERAGE ANNUAL EXCHANGE RATES (KSHS vs USD)`| The average exchange rate between KSHS and USD for that year    |
+| `ANNUAL CPI RATES (%)`                       | The Consumer Price Index rates for the year                    |
+| `ANNUAL INTEREST (LENDING) RATES (%)`        | The average annual lending interest rates                      |
+| `ANNUAL INFLATION RATES (%)`                 | The percentage inflation rate for that year (Target Variable)  |
 
-Python 3.7+
-Libraries:
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
+## Project Structure
+
+- **data/**: This folder contains the dataset file (CSV or Excel format).
+- **src/**: Contains the Python code used for data processing and model training.
+  - `preprocessing.py`: Script to clean and preprocess the dataset.
+  - `train_model.py`: Script to train the multiple linear regression model.
+  - `evaluate_model.py`: Script to evaluate the model's performance.
+- **notebooks/**: Jupyter notebooks for exploratory data analysis (EDA) and model experimentation.
+- **models/**: Saved models after training.
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+- Python 3.7+
+- Libraries:
+  - `pandas`
+  - `numpy`
+  - `scikit-learn`
+  - `matplotlib`
+  - `seaborn`
+
 You can install the required dependencies by running:
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
 Dataset Preprocessing
 Missing Data: Any missing values in the dataset are handled using mean imputation or removing rows/columns with excessive missing data.
